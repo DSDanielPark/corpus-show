@@ -12,6 +12,7 @@ class CorpusCluster:
         self.sentence_transformer_model_name = sentence_transformer_model_name
         self.target_col = target_col
 
+
     @staticmethod
     def get_corpus_cluster_df(corpus: list, sentence_transformer_model_name: str, num_cluster: int) -> list:
         embedder = SentenceTransformer(sentence_transformer_model_name)
@@ -79,3 +80,4 @@ class CorpusCluster:
             return_df = qs.vis_pca(self.df, 'embedded_sentence', true_label_col, 3, True, save_plot_path)
         
         return return_df
+
