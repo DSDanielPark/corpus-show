@@ -22,7 +22,7 @@ Corpus-Show helps to understand the corpus data distribution through various val
 
 
 # Use Case
-[1] [Korean-news-topic-classification-using-KO-BERT](https://github.com/DSDanielPark/fine-tuned-korean-BERT-news-article-classifier): all plots were created through Quick-Show.
+[1] [Korean-news-topic-classification-using-KO-BERT](https://github.com/DSDanielPark/fine-tuned-korean-BERT-news-article-classifier): all plots were created through Corpus-Show and Quick-Show.
 
 # References
 [1] Scikit-Learn https://scikit-learn.org <br>
