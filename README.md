@@ -26,7 +26,7 @@ Corpus-Show helps to understand the corpus data distribution through various val
 
 # References
 [1] Scikit-Learn https://scikit-learn.org <br>
-[2] Matplotlib https://matplotlib.org/
+[2] Matplotlib https://matplotlib.org/ <br>
 [3] Huggingface Sentence Transformer https://huggingface.co/sentence-transformers
 
 
