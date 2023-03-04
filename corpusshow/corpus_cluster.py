@@ -12,7 +12,6 @@ class CorpusCluster:
         self.sentence_transformer_model_name = sentence_transformer_model_name
         self.target_col = target_col
 
-
     @staticmethod
     def get_corpus_cluster_df(corpus: list, sentence_transformer_model_name: str, num_cluster: int) -> list:
         embedder = SentenceTransformer(sentence_transformer_model_name)
@@ -51,7 +50,6 @@ class CorpusCluster:
     def quick_cluster_show(self, vis_type, save_plot_path) -> pd.DataFrame:
         if 'cluster' not in self.df:
             self.df = self.get_df_cluster()
-            print(self.df)
         if 'embedded_sentence' not in self.df.columns:
             self.df['embedded_sentence'] = [self.embedder.encode(str(x)) for x in self.df[self.target_col]]
             
