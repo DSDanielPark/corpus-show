@@ -4,7 +4,7 @@
 ![Pypi Version](https://img.shields.io/pypi/v/corpusshow.svg)
 ![Code convention](https://img.shields.io/badge/code%20convention-pep8-black)
 
-Corpus-Show[코뿔:소] helps to understand the corpus data distribution through various values generated from Sentence Transformer.
+Corpus-Show helps to understand the corpus data distribution through various values generated from Sentence Transformer.
 - Corpus-Show performs sentence embedding via Sentence Transformers, a Python framework for state-of-the-art sentence, text and image embeddings. [[Paper]](https://arxiv.org/abs/1908.10084) [[Document]](https://www.sbert.net/) [[Huggingface model]](https://huggingface.co/sentence-transformers/paraphrase-xlm-r-multilingual-v1) 
 - You can visualize the embedded sentences of each document generated from SentenceTransformers.
 - Corpus-Show can also generate clusters with sentences embedded array through [Scikit-Learn KMeans](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html).
