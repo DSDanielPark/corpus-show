@@ -47,7 +47,7 @@ Contains 1 static method. You can create great pictures with:
 ```python
 from corpusshow import CorpusCluster
 
-# Class params
+# Class arguments
 csv_file_path = '../data/bbc_news_dataset.csv'
 sentence_transformer_model_name = 'paraphrase-xlm-r-multilingual-v1'
 target_col = 'news'
