@@ -42,8 +42,8 @@ It helps to create a simple but useful plot as shown below with a simple datafra
 |601|EU software patent law faces axe (...)|tech|
 
 
-![](https://github.com/DSDanielPark/corpus-show/blob/main/tutorials/readme_fig1.png)
-![](https://github.com/DSDanielPark/corpus-show/blob/main/tutorials/readme_fig2.png)
+![](https://github.com/DSDanielPark/corpus-show/blob/main/tutorials/imgs/readme_fig1.png)
+![](https://github.com/DSDanielPark/corpus-show/blob/main/tutorials/imgs/readme_fig2.png)
 
 
 
