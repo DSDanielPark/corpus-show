@@ -62,7 +62,9 @@ cc.quick_corpus_show('topic', 'tsne2d', False, 'fig1.png')
 cc.quick_corpus_show('topic', 'tsne3d', False, 'fig2.png')
 cc.quick_corpus_show('topic', 'pca2d', False, 'fig3.png')
 cc.quick_corpus_show('topic', 'pca3d', False, 'fig4.png')
-
+```
+![](https://github.com/DSDanielPark/corpus-show/blob/main/tutorials/imgs/readme_fig1.png)
+```python
 # 2. quick_cluster_show method:
 # Show figures with k-means clustering
 df_returned = cc.quick_cluster_show('tsne2d', False, 'fig5.png')
@@ -70,7 +72,6 @@ df_returned = cc.quick_cluster_show('tsne3d', False, 'fig6.png')
 df_returned = cc.quick_cluster_show('pcda2d', False, 'fig7.png')
 df_returned = cc.quick_cluster_show('pcda2d', False, 'fig8.png')
 ```
-![](https://github.com/DSDanielPark/corpus-show/blob/main/tutorials/imgs/readme_fig1.png)
 ![](https://github.com/DSDanielPark/corpus-show/blob/main/tutorials/imgs/readme_fig2.png)
 
 
