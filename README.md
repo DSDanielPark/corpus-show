@@ -31,7 +31,7 @@ We provide tutorial notebooks for all the features we offer. We plan to provide 
 <Br><Br><Br><Br>
 
 # Main Feature
-It helps to create a simple but useful plot as shown below with a simple dataframe and column names as input, such as the following [BBC sample dataset](`http://mlg.ucd.ie/datasets/bbc.html`) in [`./data/bbc_news_dataset.csv`](https://github.com/DSDanielPark/corpus-show/blob/main/data/bbc_news_dataset.csv).
+It helps to create a simple but useful plot as shown below with a simple dataframe and column names as input, such as the following [BBC sample dataset](http://mlg.ucd.ie/datasets/bbc.html) in [`./data/bbc_news_dataset.csv`](https://github.com/DSDanielPark/corpus-show/blob/main/data/bbc_news_dataset.csv).
 
 
 |     | news  | topic |
