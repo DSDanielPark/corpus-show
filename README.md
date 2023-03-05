@@ -4,7 +4,7 @@
 ![Pypi Version](https://img.shields.io/pypi/v/corpusshow.svg)
 ![Code convention](https://img.shields.io/badge/code%20convention-pep8-black)
 
-Corpus-Show helps to understand the corpus data distribution through various values generated from Sentence Transformer.
+Corpus-Show[코뿔:소] helps to understand the corpus data distribution through various values generated from Sentence Transformer.
 
 
 # Installation
