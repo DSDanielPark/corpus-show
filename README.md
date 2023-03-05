@@ -88,7 +88,5 @@ df_returned = cc.quick_cluster_show('pcda2d', False, 'fig8.png')
 [4] SBERT https://www.sbert.net/
 
 ### Contacts
-Project Owner(P.O): [Daniel Park, South Korea](https://github.com/DSDanielPark) 
-e-mail parkminwoo1991@gmail.com <br>
 Maintainers: [Daniel Park, South Korea](https://github.com/DSDanielPark) 
 e-mail parkminwoo1991@gmail.com
