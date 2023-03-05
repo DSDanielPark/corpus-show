@@ -5,8 +5,10 @@ import quickshow as qs
 
 
 class CorpusCluster:
-    def __init__(self, csv_file_path, sentence_transformer_model_name, target_col, num_cluster) -> None:
+    def __init__(self, csv_file_path: str, sentence_transformer_model_name: str, target_col: str, num_cluster: int) -> None:
         self.df = pd.read_csv(csv_file_path)
+        if sentence_transformer_model_name is None:
+            sentence_transformer_model_name = 'paraphrase-xlm-r-multilingual-v1'
         self.embedder =  SentenceTransformer(sentence_transformer_model_name)
         self.num_cluster = num_cluster
         self.sentence_transformer_model_name = sentence_transformer_model_name
@@ -48,36 +50,36 @@ class CorpusCluster:
         return self.df
     
 
-    def quick_cluster_show(self, vis_type, save_plot_path) -> pd.DataFrame:
-        if 'cluster' not in self.df:
+    def quick_cluster_show(self, vis_type: str, show_off: bool, save_plot_path: str) -> pd.DataFrame:
+        if 'cluster' not in self.df.columns:
             self.df = self.get_df_cluster()
         if 'embedded_sentence' not in self.df.columns:
             self.df['embedded_sentence'] = [self.embedder.encode(str(x)) for x in self.df[self.target_col]]
-            
+
         if vis_type == 'tsne2d':
-            return_df = qs.vis_tsne2d(self.df, 'embedded_sentence', 'cluster', True, save_plot_path)
+            return_df = qs.vis_tsne2d(self.df, 'embedded_sentence', 'cluster', show_off, save_plot_path)
         elif vis_type == 'tsne3d':
-            return_df  = qs.vis_tsne3d(self.df, 'embedded_sentence', 'cluster', True, save_plot_path)
+            return_df  = qs.vis_tsne3d(self.df, 'embedded_sentence', 'cluster', show_off, save_plot_path)
         elif vis_type == 'pca2d':
-            return_df = qs.vis_pca(self.df, 'embedded_sentence', 'cluster', 2, True, save_plot_path)
+            return_df = qs.vis_pca(self.df, 'embedded_sentence', 'cluster', 2, show_off, save_plot_path)
         elif vis_type == 'pca3d':
-            return_df = qs.vis_pca(self.df, 'embedded_sentence', 'cluster', 3, True, save_plot_path)
+            return_df = qs.vis_pca(self.df, 'embedded_sentence', 'cluster', 3, show_off, save_plot_path)
         
         return return_df
 
 
-    def quick_corpus_show(self, true_label_col: str, vis_type: str, save_plot_path: str) -> None:
+    def quick_corpus_show(self, true_label_col: str, vis_type: str, show_off: bool, save_plot_path: str) -> None:
         if 'embedded_sentence' not in self.df.columns:
             self.df['embedded_sentence'] = [self.embedder.encode(str(x)) for x in self.df[self.target_col]]
-
+            
         if vis_type == 'tsne2d':
-            return_df = qs.vis_tsne2d(self.df, 'embedded_sentence', true_label_col, True, save_plot_path)
+            return_df = qs.vis_tsne2d(self.df, 'embedded_sentence', true_label_col, show_off, save_plot_path)
         elif vis_type == 'tsne3d':
-            return_df  = qs.vis_tsne3d(self.df, 'embedded_sentence', true_label_col, True, save_plot_path)
+            return_df  = qs.vis_tsne3d(self.df, 'embedded_sentence', true_label_col, show_off, save_plot_path)
         elif vis_type == 'pca2d':
-            return_df = qs.vis_pca(self.df, 'embedded_sentence', true_label_col, 2, True, save_plot_path)
+            return_df = qs.vis_pca(self.df, 'embedded_sentence', true_label_col, 2, show_off, save_plot_path)
         elif vis_type == 'pca3d':
-            return_df = qs.vis_pca(self.df, 'embedded_sentence', true_label_col, 3, True, save_plot_path)
+            return_df = qs.vis_pca(self.df, 'embedded_sentence', true_label_col, 3, show_off, save_plot_path)
         
         return return_df
 
