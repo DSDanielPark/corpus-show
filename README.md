@@ -4,7 +4,7 @@
 ![Pypi Version](https://img.shields.io/pypi/v/corpusshow.svg)
 ![Code convention](https://img.shields.io/badge/code%20convention-pep8-black)
 
-Corpus-Show helps to understand the corpus data distribution through various values generated from NLP tokenizer.
+Corpus-Show helps to understand the corpus data distribution through various values generated from Sentence Transformer.
 
 
 # Installation
@@ -14,11 +14,16 @@ Corpus-Show helps to understand the corpus data distribution through various val
 <br>
 
 # Tutorial
-1. Main-tutorials: 
+1. Main-tutorials: https://github.com/DSDanielPark/corpus-show/blob/main/tutorials/corpusshow_tutorial.ipynb
 2. Sub-tutorial-folder: 
  
 
 <Br>
+
+# Main Feature
+  ![](https://github.com/DSDanielPark/corpus-show/blob/main/corpusshow/output/readme_fig1.png)
+    ![](https://github.com/DSDanielPark/corpus-show/blob/main/corpusshow/output/readme_fig1.png)
+
 
 
 # Use Case
