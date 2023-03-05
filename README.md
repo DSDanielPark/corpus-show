@@ -28,7 +28,7 @@ We provide tutorial notebooks for all the features we offer. We plan to provide 
 2. Sub-tutorial-folder: https://github.com/DSDanielPark/corpus-show/blob/main/tutorials
  
 
-<Br>
+<Br><Br><Br><Br>
 
 # Main Feature
 It helps to create a simple but useful plot as shown below with a simple dataframe and column names as input, such as the following [BBC sample dataset](`http://mlg.ucd.ie/datasets/bbc.html`) in `./data/bbc_news_dataset.csv`.
@@ -42,9 +42,40 @@ It helps to create a simple but useful plot as shown below with a simple datafra
 |601|EU software patent law faces axe (...)|tech|
 
 
+## 1. `CorpusClster`
+Contains 1 static method. You can create great pictures with:
+```python
+from corpusshow import CorpusCluster
+
+# Class params
+csv_file_path = '../data/bbc_news_dataset.csv'
+sentence_transformer_model_name = 'paraphrase-xlm-r-multilingual-v1'
+target_col = 'news'
+num_cluster = 4
+
+# Get class object
+cc = CorpusCluster(csv_file_path, sentence_transformer_model_name, target_col, num_cluster)
+
+# 1. quick_corpus_show method: 
+# Show figures without k-means clustering
+cc.quick_corpus_show('topic', 'tsne2d', False, 'fig1.png')
+cc.quick_corpus_show('topic', 'tsne3d', False, 'fig2.png')
+cc.quick_corpus_show('topic', 'pca2d', False, 'fig3.png')
+cc.quick_corpus_show('topic', 'pca3d', False, 'fig4.png')
+
+# 2. quick_cluster_show method:
+# Show figures with k-means clustering
+df_returned = cc.quick_cluster_show('tsne2d', False, 'fig5.png')
+df_returned = cc.quick_cluster_show('tsne3d', False, 'fig6.png')
+df_returned = cc.quick_cluster_show('pcda2d', False, 'fig7.png')
+df_returned = cc.quick_cluster_show('pcda2d', False, 'fig8.png')
+```
 ![](https://github.com/DSDanielPark/corpus-show/blob/main/tutorials/imgs/readme_fig1.png)
 ![](https://github.com/DSDanielPark/corpus-show/blob/main/tutorials/imgs/readme_fig2.png)
+![](https://github.com/DSDanielPark/corpus-show/blob/main/tutorials/imgs/readme_fig3.png)
+![](https://github.com/DSDanielPark/corpus-show/blob/main/tutorials/imgs/readme_fig4.png)
 
+- If you want to change the design of the plot, use matplotlib's RcParams method or the returned dataframe.
 
 
 # Use Case
