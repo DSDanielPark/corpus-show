@@ -8,7 +8,7 @@ Corpus-Show[코뿔:소] helps to understand the corpus data distribution through
 - Corpus-Show performs sentence embedding via Sentence Transformers, a Python framework for state-of-the-art sentence, text and image embeddings. [[Paper]](https://arxiv.org/abs/1908.10084) [[Document]](https://www.sbert.net/) [[Huggingface model]](https://huggingface.co/sentence-transformers/paraphrase-xlm-r-multilingual-v1) 
 - You can visualize the embedded sentences of each document generated from SentenceTransformers.
 - Corpus-Show can also generate clusters with sentences embedded array through [Scikit-Learn KMeans](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html).
-- The sentence transformer model is downloaded through the hugging face interface, and the default model is set to 'paraphrase-xlm-r-multilingual-v1', which supports multiple languages. However, you can easily input your custom model as a sentence transformer model through the hugging face interface. It is also easy to fine-tune via SBERT. For more models, please see [this page](https://huggingface.co/sentence-transformers).
+- The sentence transformer model is downloaded through the hugging face interface, and the default model is set to [`paraphrase-xlm-r-multilingual-v1`](https://huggingface.co/sentence-transformers/paraphrase-xlm-r-multilingual-v1), which supports multiple languages. However, you can easily input your custom model as a sentence transformer model through the hugging face interface. It is also easy to fine-tune via SBERT. For more models, please see [this page](https://huggingface.co/sentence-transformers).
 
 
 
@@ -41,6 +41,7 @@ It helps to create a simple but useful plot as shown below with a simple datafra
 |...|...|...|
 |601|EU software patent law faces axe (...)|tech|
 
+<br>
 
 ## 1. `CorpusClster`
 Contains 1 static method. You can create great pictures with:
@@ -73,13 +74,10 @@ df_returned = cc.quick_cluster_show('pcda2d', False, 'fig7.png')
 df_returned = cc.quick_cluster_show('pcda2d', False, 'fig8.png')
 ```
 ![](https://github.com/DSDanielPark/corpus-show/blob/main/tutorials/imgs/readme_fig2.png)
-
-
 - If you want to change the design of the plot, use matplotlib's RcParams method or the returned dataframe.
 
+<br>
 
-# Use Case
-[1] [Korean-news-topic-classification-using-KO-BERT](https://github.com/DSDanielPark/fine-tuned-korean-BERT-news-article-classifier): all plots were created through Corpus-Show and Quick-Show.
 
 # References
 [1] Scikit-Learn https://scikit-learn.org <br>
@@ -87,6 +85,13 @@ df_returned = cc.quick_cluster_show('pcda2d', False, 'fig8.png')
 [3] Huggingface Sentence Transformer https://huggingface.co/sentence-transformers <Br>
 [4] SBERT https://www.sbert.net/
 
+<br>
+
+
+### Use Case
+[1] [Korean-news-topic-classification-using-KO-BERT](https://github.com/DSDanielPark/fine-tuned-korean-BERT-news-article-classifier): all plots were created through Corpus-Show and Quick-Show.
+
+
 ### Contacts
-Maintainers: [Daniel Park, South Korea](https://github.com/DSDanielPark) 
+Maintainer: [Daniel Park, South Korea](https://github.com/DSDanielPark) 
 e-mail parkminwoo1991@gmail.com
