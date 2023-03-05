@@ -4,15 +4,14 @@
 ![Pypi Version](https://img.shields.io/pypi/v/corpusshow.svg)
 ![Code convention](https://img.shields.io/badge/code%20convention-pep8-black)
 
-<<<<<<< HEAD
-Corpus-Show helps to understand the corpus data distribution through various values generated from Sentence Transformer.
+Corpus-Show[코뿔:소] helps to understand the corpus data distribution through various values generated from Sentence Transformer.
 - Corpus-Show performs sentence embedding via Sentence Transformers, a Python framework for state-of-the-art sentence, text and image embeddings. [[paper]](https://arxiv.org/abs/1908.10084) [[Documentation]](https://www.sbert.net/) [[Hugging Face model]](https://huggingface.co/sentence-transformers/paraphrase-xlm-r-multilingual-v1) 
 - You can visualize the embedded sentences of each document generated from SentenceTransformers.
 - Corpus-Show can also generate clusters with sentences embedded array through [Scikit-Learn KMeans](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html).
 - The sentence transformer model is downloaded through the hugging face interface, and the default model is set to 'paraphrase-xlm-r-multilingual-v1', which supports multiple languages. However, you can easily input your custom model as a sentence transformer model through the hugging face interface. It is also easy to fine-tune via SBERT. For more models, please see [this page](https://huggingface.co/sentence-transformers).
-=======
-Corpus-Show[코뿔:소] helps to understand the corpus data distribution through various values generated from Sentence Transformer.
->>>>>>> 928983e1d7fe12aace0e5541967d754279b9362a
+
+
+
 
 <br>
 
