@@ -20,7 +20,7 @@ Corpus-Show helps to understand the corpus data distribution through various val
 
 <Br>
 
-# Main Feature
+# Main Features
   ![](https://github.com/DSDanielPark/corpus-show/blob/main/tutorials/readme_fig1.png)
   ![](https://github.com/DSDanielPark/corpus-show/blob/main/tutorials/readme_fig2.png)
 
