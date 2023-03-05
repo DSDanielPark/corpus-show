@@ -6,7 +6,8 @@ import quickshow as qs
 
 class CorpusCluster:
     def __init__(self, csv_file_path: str, sentence_transformer_model_name: str, target_col: str, num_cluster: int) -> None:
-        self.df = pd.read_csv(csv_file_path)
+        if csv_file_path is not None:
+            self.df = pd.read_csv(csv_file_path)
         if sentence_transformer_model_name is None:
             sentence_transformer_model_name = 'paraphrase-xlm-r-multilingual-v1'
         self.embedder =  SentenceTransformer(sentence_transformer_model_name)
