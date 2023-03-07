@@ -19,6 +19,7 @@ Corpus-Show helps to understand the corpus data distribution through various val
   ```zsh
   pip install corpusshow
   ```
+  - This package may not work properly in m1/m2 mac environment. If you are using Mac m1/m2, please use the git repository as a submodule because it has minimal encapsulation. [[issue#1]](https://github.com/DSDanielPark/corpus-show/issues/1)
 <br>
 
 # Tutorial
