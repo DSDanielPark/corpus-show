@@ -16,8 +16,8 @@ Corpus-Show helps to understand the corpus data distribution through various val
 <br>
 
 # Installation
-  ```cmd
-  $ pip install corpusshow
+  ```zsh
+  pip install corpusshow
   ```
 <br>
 
