@@ -2,6 +2,7 @@ from sentence_transformers import SentenceTransformer
 from sklearn.cluster import KMeans
 import pandas as pd
 import quickshow as qs
+import tqdm
 
 
 class CorpusCluster:
@@ -24,7 +25,7 @@ class CorpusCluster:
         k_means_model.fit(corpus_embeddings)
         cluster_assignment = k_means_model.labels_
         clustered_corpus = [[] for i in range(num_cluster)]
-        for sentence_id, cluster_id in enumerate(cluster_assignment):
+        for sentence_id, cluster_id in tqdm(enumerate(cluster_assignment), total=len(corpus)):
             clustered_corpus[cluster_id].append(corpus[sentence_id])
         clustered_list = [[str(i)+'cluster'+x for x in clustered_corpus[i]] for i in range(num_cluster)]
 
@@ -51,11 +52,15 @@ class CorpusCluster:
         return self.df
     
 
+    def embed(self, x):
+        return self.embedder.encode(str(x))
+
+
     def quick_cluster_show(self, vis_type: str, show_off: bool, save_plot_path: str) -> pd.DataFrame:
         if 'cluster' not in self.df.columns:
             self.df = self.get_df_cluster()
         if 'embedded_sentence' not in self.df.columns:
-            self.df['embedded_sentence'] = [self.embedder.encode(str(x)) for x in self.df[self.target_col]]
+            self.df['embedded_sentence'] = [self.embed(x) for x in tqdm(self.df[self.target_col])]
 
         if vis_type == 'tsne2d':
             return_df = qs.vis_tsne2d(self.df, 'embedded_sentence', 'cluster', show_off, save_plot_path)
@@ -71,8 +76,8 @@ class CorpusCluster:
 
     def quick_corpus_show(self, true_label_col: str, vis_type: str, show_off: bool, save_plot_path: str) -> None:
         if 'embedded_sentence' not in self.df.columns:
-            self.df['embedded_sentence'] = [self.embedder.encode(str(x)) for x in self.df[self.target_col]]
-            
+            self.df['embedded_sentence'] = [self.embed(x)for x in tqdm(self.df[self.target_col])]
+
         if vis_type == 'tsne2d':
             return_df = qs.vis_tsne2d(self.df, 'embedded_sentence', true_label_col, show_off, save_plot_path)
         elif vis_type == 'tsne3d':
