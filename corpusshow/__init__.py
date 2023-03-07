@@ -2,4 +2,4 @@ from corpusshow.corpus_cluster import CorpusCluster
 
 __all__ = ['CorpusCluster']
 
-__version__ = "0.1.2"
+__version__ = "0.1.3"
