@@ -2,7 +2,7 @@ from sentence_transformers import SentenceTransformer
 from sklearn.cluster import KMeans
 import pandas as pd
 import quickshow as qs
-import tqdm
+from tqdm import tqdm
 
 
 class CorpusCluster:
