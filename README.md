@@ -23,7 +23,7 @@ Corpus-Show helps to understand the corpus data distribution through various val
 <br>
 
 # Tutorial
-We provide tutorial notebooks for all the features we offer. We plan to provide additional docstrings or documentation from the official release version (major version 1 or higher).
+We provide tutorial notebooks for all the features we offer. I plan to provide additional docstrings or documentation from the official release version (major version 1 or higher).
 
 1. Main-tutorials: https://github.com/DSDanielPark/corpus-show/blob/main/tutorials/corpusshow_tutorial.ipynb
 2. Sub-tutorial-folder: https://github.com/DSDanielPark/corpus-show/blob/main/tutorials
