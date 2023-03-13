@@ -18,4 +18,5 @@ setuptools.setup(
     "transformers", "tokenizer",
         "sentence-transformers",
         "quickshow",
+        "matplotlib>==3.4.3"
     ])
