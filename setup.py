@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="corpusshow",
-    version="0.1.7",
+    version="0.1.8",
     author="parkminwoo",
     author_email="parkminwoo1991@gmail.com",
     description="Corpus-Show makes it easier and faster to visualize corpus through sentence embedding of corpus.",
@@ -17,6 +17,6 @@ setuptools.setup(
     install_requires=[
     "transformers", "tokenizer",
         "sentence-transformers",
-        "quickshow",
+        "quickshow>=0.1.12",
         "matplotlib>==3.4.3"
     ])
