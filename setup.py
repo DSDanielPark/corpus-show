@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="corpusshow",
-    version="0.1.8",
+    version="0.1.9",
     author="parkminwoo",
     author_email="parkminwoo1991@gmail.com",
     description="Corpus-Show makes it easier and faster to visualize corpus through sentence embedding of corpus.",
