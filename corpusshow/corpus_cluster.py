@@ -243,7 +243,7 @@ class CorpusCluster:
         elif vis_type == 'pca3d':
             return_df = qs.vis_pca(self.df, 'embedded_sentence', 'cluster', 3, show_off, save_plot_path)
         elif vis_type == 'joint_pca2d':
-            return_df = qs.joint_pca2d(self.df, 'embedded_sentence', 'cluster', 2, show_off, save_plot_path)
+            return_df = qs.joint_pca2d(self.df, 'embedded_sentence', 'cluster', show_off, save_plot_path)
         elif vis_type == 'joint_tsne2d':
             return_df = qs.joint_tsne2d(self.df, 'embedded_sentence', 'cluster', show_off, save_plot_path)
         
@@ -276,7 +276,7 @@ class CorpusCluster:
         elif vis_type == 'pca3d':
             return_df = qs.vis_pca(self.df, 'embedded_sentence', true_label_col, 3, show_off, save_plot_path)
         elif vis_type == 'joint_pca2d':
-            return_df = qs.joint_pca2d(self.df, 'embedded_sentence', true_label_col, 2, show_off, save_plot_path)
+            return_df = qs.joint_pca2d(self.df, 'embedded_sentence', true_label_col, show_off, save_plot_path)
         elif vis_type == 'joint_tsne2d':
             return_df = qs.joint_tsne2d(self.df, 'embedded_sentence', true_label_col, show_off, save_plot_path)
         
